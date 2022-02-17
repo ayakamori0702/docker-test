@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    anaconda:
+        build: .
+        volumes:
+            - '.:/opt/notebooks'
+        ports:
+            - '8888:8888'
+        tty: true
+        platform: linux/amd64
