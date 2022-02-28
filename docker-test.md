@@ -2,7 +2,7 @@
 　
 
 ### docker-test フォルダに入っているもの　　
-　　
+
 <span style="color: skyblue; ">titanicのデータ分析に必要なもの</span>  
 *titanic.ipynb  
 *test.csv  
@@ -17,39 +17,36 @@
 ## 手順
 　　
 ### **1. dockerの環境構築**
-　　
+
 ubuntuOSに docker,docker-compose をインストールする  
   
 参照：  
-  
-
 [dockerのインストール](https://www.trifields.jp/how-to-install-docker-on-ubuntu-2004-4436)  
 [docker-composeのインストール](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-ja)  
   
-### **2. 作業フォルダを入手**  
-  
-docker-testフォルダをGitHubからCloneす  
-　　　　　　　　　　　→できない！なぜかCloneできない。。。スマホで見るときと同じブラウザになっているのでダウンロードするボタンが見つからない.  
-なのでGoogle　Driveからダウンロードした。
+### **2. 作業フォルダを入手** 
+
+今回はGoogle　Driveからダウンロードした。
   
 
 ### **3. コンテナを立ち上げる**
-  
+
+
+
 docker-testディレクトリにカレントディレクトリをうつしてコマンド  
     
-`$ docker-compose up -d`
-   
-<span style="color: red; ">エラー１</span>：platformｎエラー　　platformについての記載をdocker-compose.ymlに記載したままだったので、該当部分を消去してみた。  
-→OK  
+`$ docker-compose up -d`  
 
-　　　　　
-<span style="color: red; ">エラー2</span>：容量が足りなくなった。　そもそも１０Gしか割り当ててなかったので、３０Gに増やした。  
-→OK
-                　テスト先の容量のことも考えないといけない？
+<span style="color: red; ">エラー１</span>：platformｎエラー　　platformについての記載をdocker-compose.ymlに記載したままだったので、該当部分を消去してみた。→OK  
+
+
+<span style="color: red; ">エラー2</span>：容量が足りなくなった。　そもそも１０Gしか割り当ててなかったので、３０Gに増やした。→OK
+テスト先の容量のことも考えないといけない？
   
 
 ### **4. jupyterlabを立ち上げる**
-  
+
+
 ブラウザ上で　`localhost:8888:8888` を立ち上げる  
 
 　　　　　　　　　　　
@@ -72,7 +69,7 @@ docker-testディレクトリにカレントディレクトリをうつしてコ
 
 ***  
 ***  
-
+*** 
 
 
 
@@ -85,7 +82,7 @@ docker-testディレクトリにカレントディレクトリをうつしてコ
 ### docker-test フォルダに入っているもの　　
 
 
-　　
+
 <span style="color: skyblue; ">titanicのデータ分析に必要なもの</span>  
 *titanic.ipynb  
 *test.csv  
@@ -101,7 +98,7 @@ docker-testディレクトリにカレントディレクトリをうつしてコ
 今回は、講習で教えていただいたCloud9のサービスを利用してUbuntuを動かした。SSHキーを作成してEC2にアクセスすればOK
 
 ### **1. dockerの環境構築**
-　　
+
 ubuntuOSに docker,docker-compose をインストールする
 
 
@@ -122,8 +119,7 @@ docker-testディレクトリにカレントディレクトリをうつしてコ
 
 　　　　　
 <span style="color: red; ">エラー1</span>：容量が足りなくなった。　講習のとおり、８Gしかストレージの確保していなかったので、足りない。
-今回の変更可能最大容量、30Gに変更。
-→OK
+今回の変更可能最大容量、30Gに変更。→OK
 
 <span style="color: red; ">エラー2</span>：管理者権限の問題なのか、apt-getできなかった。。。  
 今回は、仮に割り当ててもらったアカウントだったからなのか、原因わからずタイムアウト。
